@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="blog_posts" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="96px" height="96px" viewBox="-16 -16 96 96" enable-background="new -16 -16 96 96" xml:space="preserve">
+	 <style type="text/css">	
+		.flipMe {
+		  animation: flipMe 9s ease-in-out infinite;
+		  transform-origin: center;
+		  -webkit-transform-origin: 50% 50%;
+		}
+		@keyframes flipMe {
+		  5%{
+			transform: rotateY(0deg);
+			-webkit-transform: rotateY(0deg);
+		  }
+		  10% {
+			transform: rotateY(360deg);
+			-webkit-transform: rotateY(360deg);
+		  }
+		  15% {
+			transform: rotateY(0deg);
+			-webkit-transform: rotateY(0deg);
+		  }
+		}
+		@-webkit-keyframes flipMe {
+		  5%{
+			transform: rotateY(0deg);
+			-webkit-transform: rotateY(0deg);
+		  }
+		  10% {
+			transform: rotateY(360deg);
+			-webkit-transform: rotateY(360deg);
+		  }
+		  15% {
+			transform: rotateY(0deg);
+			-webkit-transform: rotateY(0deg);
+		  }
+		} 		
+		.fillMe {animation: fillMe 3s ease-in-out infinite;}
+		@keyframes fillMe {
+		  5%{
+			fill:#DAE8EF;
+		  }		 
+		  50% {
+			fill:#fff;
+		  }	
+		}
+		@-webkit-keyframes fillMe {
+		  5%{
+			fill:#DAE8EF;
+		  }		 
+		  50% {
+			fill:#fff;
+		  }	
+		}
+	</style>
+	<g>
+		<path fill="#FFFFFF" stroke="#0088FF" stroke-width="1.5" stroke-miterlimit="10" d="M1.359-2.301L1.359-2.301v76.072h49.734
+		c3.1,0,5.609-2.514,5.609-5.611v-70.46v-0.59c0-3.574,2.895-6.468,6.467-6.468H8.417C4.521-9.357,1.359-6.197,1.359-2.301z"/>	
+		<line fill="none" stroke="#0088FF" stroke-width="1.5" stroke-linecap="round" stroke-miterlimit="10" x1="9.729" y1="15.492" x2="48.57" y2="15.492"/>	
+		<line fill="none" stroke="#0088FF" stroke-width="1.5" stroke-linecap="round" stroke-miterlimit="10" x1="9.729" y1="26.497" x2="48.57" y2="26.497"/>	
+		<line fill="none" stroke="#0088FF" stroke-width="1.5" stroke-linecap="round" stroke-miterlimit="10" x1="9.729" y1="37.505" x2="37.559" y2="37.505"/>
+	</g>
+	<g class="flipMe">
+		<path class="fillMe" fill="#DAE8EF" stroke="#0088FF" stroke-width="1.5" stroke-miterlimit="10" d="M49.471,60.609
+		c7.627,0,13.813-6.219,13.813-13.891c0-7.674-6.186-13.893-13.813-13.893s-13.809,6.219-13.809,13.893
+		C35.662,54.391,41.844,60.609,49.471,60.609z"/>
+		<g>
+		<path fill="#B5E1AC" stroke="#0088FF" stroke-width="1.5" stroke-miterlimit="10" d="M42.496,49.963
+		c-1.439,0-2.621-1.18-2.621-2.629c0-1.447,1.182-2.627,2.621-2.627c1.442,0,2.623,1.18,2.623,2.627
+		C45.119,48.783,43.938,49.963,42.496,49.963z M52.488,43.719c-1.438,0-2.62-1.182-2.62-2.629c0-1.448,1.182-2.629,2.62-2.629
+		c1.44,0,2.62,1.181,2.62,2.629C55.108,42.537,53.929,43.719,52.488,43.719z M52.488,54.973c-1.438,0-2.62-1.18-2.62-2.625
+		c0-1.447,1.182-2.629,2.62-2.629c1.44,0,2.62,1.182,2.62,2.629C55.108,53.787,53.929,54.973,52.488,54.973z"/>	
+		<line fill="none" stroke="#0088FF" stroke-width="1.5" stroke-linecap="round" stroke-miterlimit="10" x1="44.893" y1="46.23" x2="49.905" y2="43.096"/>	
+		<line fill="none" stroke="#0088FF" stroke-width="1.5" stroke-linecap="round" stroke-miterlimit="10" x1="50.377" y1="50.383" x2="45.362" y2="47.953"/>
+		</g>
+	</g>
+</svg>

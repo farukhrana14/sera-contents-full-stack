@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="product_descriptions" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	 x="0px" y="0px" width="96px" height="96px" viewBox="-16 -16 96 96" enable-background="new -16 -16 96 96" xml:space="preserve">
+	 <style type="text/css">		
+		.draw {
+		  stroke-dasharray: 150;
+		  stroke-dashoffset: 150;
+		  animation: dashMe 6s linear alternate infinite;
+		}
+		@keyframes dashMe {
+		  from {
+			stroke-dashoffset: 150;
+		  }
+		  to {
+			stroke-dashoffset: 0;
+		  }
+		}
+		@keyframes dashMe {
+		  from {
+			stroke-dashoffset: 150;
+		  }
+		  to {
+			stroke-dashoffset: 0;
+		  }
+		}
+		@-webkit-keyframes dashMe {
+		  from {
+			stroke-dashoffset: 150;
+		  }
+		  to {
+			stroke-dashoffset: 0;
+		  }
+		}
+		.d2 { animation-delay:1s;}
+		.d3 { animation-delay:2s;}
+		.d4 { animation-delay:3s;}		
+	</style>
+<path fill="#FFFFFF" d="M72.76,44.636L45.814,71.632c-1.315,1.26-3.129,2.033-4.992,2.033c-1.867,0-3.68-0.773-4.941-2.033
+	L-3.354,32.339c-2.799-2.743-4.995-8.065-4.995-11.964V-2.451c0-3.841,3.183-7.024,7.024-7.024h22.828
+	c3.896,0,9.221,2.194,12.02,4.995L72.76,34.699c1.266,1.319,2.035,3.129,2.035,4.996C74.791,41.561,74.021,43.371,72.76,44.636z
+	 M9.211,1.063c-3.896,0-7.024,3.125-7.024,7.023c0,3.898,3.128,7.023,7.024,7.023c3.897,0,7.024-3.125,7.024-7.023
+	C16.235,4.189,13.108,1.063,9.211,1.063z"/>
+<path fill="none" stroke="#0088FF" stroke-width="1.5" stroke-miterlimit="10" d="M72.76,44.636L45.814,71.632
+	c-1.315,1.26-3.129,2.033-4.992,2.033c-1.867,0-3.68-0.773-4.941-2.033L-3.354,32.339c-2.799-2.743-4.995-8.065-4.995-11.964V-2.451
+	c0-3.841,3.183-7.024,7.024-7.024h22.828c3.896,0,9.221,2.194,12.02,4.995L72.76,34.699c1.266,1.319,2.035,3.129,2.035,4.996
+	C74.791,41.561,74.021,43.371,72.76,44.636z M9.211,1.063c-3.896,0-7.024,3.125-7.024,7.023c0,3.898,3.128,7.023,7.024,7.023
+	c3.897,0,7.024-3.125,7.024-7.023C16.235,4.189,13.108,1.063,9.211,1.063z"/>
+<rect class="rect1 draw d4" x="26.656" y="38.396" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -26.4877 35.4777)" fill="#DAE8EF" stroke="#0088FF" stroke-width="1.5" stroke-miterlimit="10" width="5.852" height="22.633"/>
+<rect class="rect2 draw d3" x="32.955" y="32.929" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -21.0202 37.743)" fill="#DAE8EF" stroke="#0088FF" stroke-width="1.5" stroke-miterlimit="10" width="4.19" height="22.633"/>
+<rect class="rect3 draw d2" x="36.877" y="25.643" transform="matrix(0.7072 -0.7071 0.7071 0.7072 -13.7344 40.7572)" fill="#DAE8EF" stroke="#0088FF" stroke-width="1.5" stroke-miterlimit="10" width="10.917" height="22.633"/>
+<rect class="rect4 draw" x="47.216" y="17.407" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -5.499 44.1716)" fill="#DAE8EF" stroke="#0088FF" stroke-width="1.5" stroke-miterlimit="10" width="6.709" height="22.633"/>
+</svg>

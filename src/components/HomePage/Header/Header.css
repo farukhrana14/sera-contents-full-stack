@@ -1,0 +1,27 @@
+.btn-green, .cover a.btn.btn-green, .cover .jumb a.btn.btn-green {
+    color: #fff;
+    background-color: #46b04a;
+    border-color: #46b04a;
+    background-image: none;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.btn-green:hover, .cover a.btn.btn-green:hover {
+    color: #fff;
+    background-color: #159b21;
+    border-color: #159b21;
+    background-image: none;
+}
+
+.Typewriter__wrapper {
+    color: greenyellow;
+    font-size: xxx-large;
+    font-weight: 500;
+}
+
+.Typewriter__cursor {
+    color: greenyellow;
+    font-size: xx-large;
+    
+}

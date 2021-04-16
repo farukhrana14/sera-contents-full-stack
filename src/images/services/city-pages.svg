@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="city_pages" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="96px" height="96px" viewBox="-16 -16 96 96" enable-background="new -16 -16 96 96" xml:space="preserve">
+	 <style type="text/css">		
+		.lightMe {
+		  animation: lightMe linear alternate infinite;
+		}
+		.lightMe {animation-duration:2s;}
+		.lightMe.d2 {animation-delay:1s; animation-duration:2.5s;}
+		.lightMe.d3 {animation-delay:2s; animation-duration:3s;}
+		.lightMe.d4 {animation-delay:3s; animation-duration:3.5s;}
+		@keyframes lightMe {
+		  from {
+			fill:#dae8ff;
+			stroke:#0088ff;
+			opacity:1;
+		  }
+		  20% {
+			fill:#B5E1AC;
+			stroke:#0088ff;
+			opacity:0;
+		  }
+		  to {
+			fill:#B5E1AC;
+			stroke:#0088ff;
+			opacity:0;
+		  }
+		}
+		@-webkit-keyframes lightMe {
+		  from {
+			fill:#dae8ff;
+			stroke:#0088ff;
+			opacity:1;
+		  }
+		  20% {
+			fill:#B5E1AC;
+			stroke:#0088ff;
+			opacity:0;
+		  }
+		  to {
+			fill:#B5E1AC;
+			stroke:#0088ff;
+			opacity:0;
+		  }
+		}
+	</style>
+<g>
+	<polygon fill="#FFFFFF" stroke="#0088FF" stroke-width="1.5" stroke-miterlimit="10" points="20.963,-2.524 20.963,-9.367 
+		-7.144,-9.367 -7.144,-2.524 -10.659,-2.524 -10.659,73.771 24.48,73.771 24.48,-2.524 	"/>	
+		<rect x="-7.144" y="-9.367" fill="#DAE8EF" stroke="#0088FF" stroke-width="1.5" stroke-miterlimit="10" width="28.107" height="6.843"/>	
+		<rect x="34.839" y="26.201" fill="#FFFFFF" stroke="#0088FF" stroke-width="1.5" stroke-miterlimit="10" width="28.114" height="17.257"/>
+	<path fill="#DAE8EF" stroke="#0088FF" stroke-width="1.5" stroke-miterlimit="10" d="M76.492,42.768H24.186v30.909h9.397
+		c0.922-7.924,7.577-14.104,15.751-14.104c8.173,0,14.821,6.185,15.742,14.104H76.5L76.492,42.768L76.492,42.768z"/>
+</g>
+<g>
+	<g>		
+		<rect x="-4.908" y="4.026" fill="#DAE8EF" stroke="#0088FF" stroke-width="1.5" stroke-miterlimit="10" width="6.112" height="4.813"/>		
+		<rect class="lightMe d2" x="3.981" y="4.026" fill="#DAE8EF" stroke="#0088FF" stroke-width="1.5" stroke-miterlimit="10" width="6.112" height="4.813"/>		
+		<rect class="lightMe d3" x="12.872" y="4.026" fill="#DAE8EF" stroke="#0088FF" stroke-width="1.5" stroke-miterlimit="10" width="6.112" height="4.813"/>
+	</g>
+	<g>		
+		<rect class="lightMe d4" x="-4.908" y="18.354" fill="#DAE8EF" stroke="#0088FF" stroke-width="1.5" stroke-miterlimit="10" width="6.112" height="4.817"/>		
+		<rect x="3.981" y="18.354" fill="#DAE8EF" stroke="#0088FF" stroke-width="1.5" stroke-miterlimit="10" width="6.112" height="4.817"/>		
+		<rect x="12.872" y="18.354" fill="#DAE8EF" stroke="#0088FF" stroke-width="1.5" stroke-miterlimit="10" width="6.112" height="4.817"/>
+	</g>
+	<g>		
+		<rect x="-4.908" y="32.684" fill="#DAE8EF" stroke="#0088FF" stroke-width="1.5" stroke-miterlimit="10" width="6.112" height="4.816"/>		
+		<rect x="3.981" y="32.684" fill="#DAE8EF" stroke="#0088FF" stroke-width="1.5" stroke-miterlimit="10" width="6.112" height="4.816"/>		
+		<rect class="lightMe d3" x="12.872" y="32.684" fill="#DAE8EF" stroke="#0088FF" stroke-width="1.5" stroke-miterlimit="10" width="6.112" height="4.816"/>
+	</g>
+	<g>		
+		<rect x="-4.908" y="46.885" fill="#DAE8EF" stroke="#0088FF" stroke-width="1.5" stroke-miterlimit="10" width="6.112" height="4.814"/>		
+		<rect class="lightMe d3" x="3.981" y="46.885" fill="#DAE8EF" stroke="#0088FF" stroke-width="1.5" stroke-miterlimit="10" width="6.112" height="4.814"/>		
+		<rect class="lightMe" x="12.872" y="46.885" fill="#DAE8EF" stroke="#0088FF" stroke-width="1.5" stroke-miterlimit="10" width="6.112" height="4.814"/>
+	</g>	
+		<rect class="lightMe d2" x="-4.908" y="61.214" fill="#DAE8EF" stroke="#0088FF" stroke-width="1.5" stroke-miterlimit="10" width="6.112" height="4.814"/>	
+		<rect x="3.981" y="61.214" fill="#DAE8EF" stroke="#0088FF" stroke-width="1.5" stroke-miterlimit="10" width="6.112" height="12.411"/>	
+		<rect x="12.872" y="61.214" fill="#DAE8EF" stroke="#0088FF" stroke-width="1.5" stroke-miterlimit="10" width="6.112" height="4.814"/>
+</g>
+</svg>
