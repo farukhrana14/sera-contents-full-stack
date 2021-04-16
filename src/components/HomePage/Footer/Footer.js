@@ -37,9 +37,9 @@ const aboutUs = [
 ]
 
 const ourAddress = [
-    { name: "New York - 101010 Hudson", link: "//google.com/map" },
-    { name: "Yards", link: "//google.com/map" },
-
+    { name: "12489 Berlin", link: "https://www.google.com/map" },
+    { name: "Justus-vom-Liebig-Str", link: "https://www.google.com/map" },
+    { name: "Germany", link: "https://www.google.com/map" }
 ]
 
 
@@ -53,11 +53,11 @@ const Footer = () => {
                     <FooterColumns key={2} menuTitle="Who We Help" menuItems={serviceForWhom} />
                     <FooterColumns key={3} menuTitle="Resources" menuItems={resources} />
                     <FooterColumns key={4} menuTitle="About Us" menuItems={aboutUs}/>
-                    <FooterColumns key={4} menuTitle="Our Address" menuItems={ourAddress}>
+                    <FooterColumns key={5} menuTitle="Our Address" menuItems={ourAddress}>
                             <ul className="social-media list-inline">
-                                <li className="list-inline-item"><a href="//facebook.com"><FontAwesomeIcon style={{color: '#3b5998', backgroundColor: 'white', border: '1px solid #3b5998'}} className="icon active-icon" icon={faFacebookF} /></a></li>
-                                <li className="list-inline-item"><a href="//youtube.com"><FontAwesomeIcon style={{color: 'red', backgroundColor: 'white', border: '1px solid red'}} className="icon" icon={faYoutube} /></a></li>
-                                <li className="list-inline-item"><a href="//twitter.com"><FontAwesomeIcon style={{color: '#00acee', backgroundColor: 'white', border: '1px solid #00acee'}} className="icon" icon={faTwitter} /></a></li>
+                                <li className="list-inline-item"><a href="https://www.facebook.com"><FontAwesomeIcon style={{color: '#3b5998', backgroundColor: 'white', border: '1px solid #3b5998'}} className="icon active-icon" icon={faFacebookF} /></a></li>
+                                <li className="list-inline-item"><a href="https://www.youtube.com"><FontAwesomeIcon style={{color: 'red', backgroundColor: 'white', border: '1px solid red'}} className="icon" icon={faYoutube} /></a></li>
+                                <li className="list-inline-item"><a href="https://www.twitter.com"><FontAwesomeIcon style={{color: '#00acee', backgroundColor: 'white', border: '1px solid #00acee'}} className="icon" icon={faTwitter} /></a></li>
                             </ul>
                             
                         </FooterColumns>
