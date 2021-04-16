@@ -11,7 +11,7 @@ const Header = () => {
                 <h3 className='text-white'>Sera Contents</h3>
                 <h1 style={{color: '#FFFFFF'}}>We write amazing</h1>
                 <p className='text-white'>Hire the Web's Best Content Writers With Our Professional Content Writing Services</p>
-                <Typewriter style={{fontSize: 'xx-large', color: 'lightgreen'}} options={{strings: ['ARTICLES', 'BLOGS', 'PRODUCT DESCRIPTION', 'CATEGORY'], autoStart: true, loop: true, }}/> 
+                <Typewriter style={{fontSize: 'xx-large', color: 'lightgreen'}} options={{strings: ['ARTICLES', 'BLOGS', 'PRODUCT', 'CATEGORY'], autoStart: true, loop: true, }}/> 
                 <Link to="/" className="btn btn-green text-white">START NOW</Link>
             </div>
             <div className='col-md-6 col-sm-6 col-12'>
