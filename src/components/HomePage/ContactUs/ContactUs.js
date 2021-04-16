@@ -4,7 +4,7 @@ import './ContactUs.css';
 
 const ContactUs = () => {
     return (
-        <section className="contact my-5 py-5">
+        <section style={{marginTop: '20px'}} className="contact mt-5 py-5">
            <div className="container">
                <div className="section-header text-center text-white mb-5">
                     <h3 className="text-white">Contact Us</h3>

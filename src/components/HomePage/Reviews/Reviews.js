@@ -34,8 +34,8 @@ const Reviews = () => {
         <section className="reviews my-5 pt-5">
         <div className="container">
           <div className="section-header text-center">
-            <h5 className="text-brand text-uppercase">our blog</h5>
-            <h2>From Our Blog News</h2>
+            <h5 className="text-uppercase">Reviews</h5>
+            <h2 className="text-brand" >From Our Customers</h2>
           </div>
           <div className="card-deck mt-5">
                     {

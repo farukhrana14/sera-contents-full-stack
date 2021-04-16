@@ -16,8 +16,8 @@
 .reviews .card:hover .card-body{
     background-image: url(../../../images/comma.png);
     background-repeat: no-repeat;
-    background-position: right top;
-    background-size: 60%;
+    background-position: left top;
+    background-size: 20%;
 }
 
 

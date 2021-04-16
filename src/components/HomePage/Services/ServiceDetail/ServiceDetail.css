@@ -1,3 +1,10 @@
 .service-description {
     height: 100px;
 }
+
+.myCard:hover {
+    padding-top: 15px;
+    background-image: linear-gradient(75deg, #0088ff, #005fb2);
+    color: #fff !important;
+    transition:  .1s  all ease-in-out !important;
+}

@@ -6,7 +6,7 @@ const ServiceDetail = ({service}) => {
 
 
     return (
-        <div className='col-md-4 text-center'>
+        <div className='col-md-4 text-center myCard'>
             <img style={{height: '100px'}} src={service.img} alt=''/>
             <h5 className='mt-3 mb-3'>{service.name}</h5>
             <p className='service-description mb-5' > {service.description} </p>
