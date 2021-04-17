@@ -7,7 +7,7 @@ const ServiceDetail = ({service}) => {
 
 
     return (
-        <AnimationWrapper className='card col-md-4 text-center bg-light mb-5 px-3 pt-5'>
+        <AnimationWrapper className='card col-md-4 text-center bg-light mb-5 px-3 pt-3'>
         
             <img style={{height: '100px'}} src={service.img} alt=''/>
             <h4 className='text-brand mt-3 mb-3'>{service.name}</h4>

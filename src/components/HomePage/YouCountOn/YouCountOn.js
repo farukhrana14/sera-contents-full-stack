@@ -1,6 +1,6 @@
 import React from 'react';
 import CountUp from 'react-countup';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-scroll'
 
 
 const YouCountOn = () => {
@@ -27,7 +27,7 @@ const YouCountOn = () => {
             </div>
             <p className='text-center mt-3' style={{fontSize: '1.3rem', color: 'white'}}>Ready to see why industry-leading companies trust us to write their content? Create your free account today.</p>
             <div className="d-flex justify-content-center">
-                <Link to="/" className="btn btn-green text-white">GET STARTED NOW</Link>
+                <Link to="services" spy={true} smooth={true} className="btn btn-green text-white">GET STARTED NOW</Link>
             </div>
         
         </div>

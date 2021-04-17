@@ -28,7 +28,7 @@ const serviceData = [
 
 const Services = () => {
     return (
-        <section className='services-container pt-5'  style={{backgroundColor: '#0088FF'}}>
+        <section id='services' className='pt-3'  style={{backgroundColor: '#0088FF'}}>
             <div className='text-center'>
                 <h3 className='text-white'>OUR SERVICES</h3>
                 <h2 className='text-white'>Create Any Type of Content</h2>
