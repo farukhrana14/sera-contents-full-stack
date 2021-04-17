@@ -2,9 +2,10 @@ import React from 'react';
 
 const BuiltForYou = () => {
     return (
-        <div className='w-75  mt-5 mx-auto pb-5'>
+        <div style={{backgroundColor: 'white'}}>
+            <div className='w-75  mt-5 mx-auto pb-5'>
             <h2 className='text-center'>We Make Content Creation Simple</h2>
-            <div  className='marketPlace card-deck row bg-light'>
+            <div  className='marketPlace card-deck row'>
                 
                     <div className='card shadow-sm col-md-6 col-12 mt-5 text-brand text-center market-info'>
                         <h3 className='mt-5'>Content Marketplace</h3>
@@ -17,6 +18,7 @@ const BuiltForYou = () => {
                 
 
             </div>
+        </div>
         </div>
     );
 };

@@ -8,30 +8,33 @@ const serviceData = [
     {
         name: 'Article Writing',
         img: articleImg,
-        description: 'Hire the web’s best article writers with our professional writing service. Quality content on demand. Strong long-form articles that communicate your brands message to your audience.'
+        description: 'Hire the web’s best article writers with our professional writing service. Quality content on demand. Strong long-form articles that communicate your brands message to your audience.',
+        price: 100
     },
     {
         name: 'Blog Posts',
         img: blogImg,
-        description: 'Hire the webs best bloggers with our blog post writing service. Order content for your blog that will drive traffic and delight readers.'
+        description: 'Hire the webs best bloggers with our blog post writing service. Order content for your blog that will drive traffic and delight readers.',
+        price: 150
     },
     {
         name: 'Product Desciption',
         img: productImg,
-        description: 'Hire expert product description writers with our copywriting service. Use our on-demand product description writing service trusted by leading ecommerce companies.'
+        description: 'Hire expert product description writers with our copywriting service. Use our on-demand product description writing service trusted by leading ecommerce companies.',
+        price: 200
     }
 ]
 
 
 const Services = () => {
     return (
-        <section className='services-container pt-5'>
+        <section className='services-container pt-5'  style={{backgroundColor: '#0088FF'}}>
             <div className='text-center'>
-                <h3 className='text-brand'>OUR SERVICES</h3>
-                <h2>Create Any Type of Content</h2>
+                <h3 className='text-white'>OUR SERVICES</h3>
+                <h2 className='text-white'>Create Any Type of Content</h2>
             </div>
             <div className='d-flex justify-content-center'>
-                <div className = 'w-75 row mt-5 pt-5'>
+                <div className = 'w-75 row mt-3'>
                     {
                         serviceData.map(service => <ServiceDetail service={service} key={service.name}></ServiceDetail>)
                     }
