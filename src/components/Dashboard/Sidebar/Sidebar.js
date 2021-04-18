@@ -1,16 +1,54 @@
-import React from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import './Sidebar.css';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserShield, faNewspaper, faTasks, faShoppingCart, faCog, faSignOutAlt, faHome, faGripHorizontal } from '@fortawesome/free-solid-svg-icons';
 import { faFileAlt } from '@fortawesome/free-regular-svg-icons';
-
+import jwt_decode from "jwt-decode";
+import { UserContext } from '../../../App';
 
 const Sidebar = () => {
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    const [adminMenuStyle, setAdminMenuStyle] = useState([]);
+    const [isAdmin, setIsAdmin] = useState([]);
+    const history = useHistory();
 
-    const isAdmin = sessionStorage.getItem('admin');
-    console.log(isAdmin);
+    const token = sessionStorage.getItem('token')
+    const decodedToken = jwt_decode(token);
+    // console.log(decodedToken.email, 'or', loggedInUser.email );
+    const emailCheck = decodedToken.email || loggedInUser.email;
     
+    useEffect(()=> {
+         
+    fetch('http://localhost:5000/isAdmin', {
+        method: 'POST',
+        headers:  {'Content-Type': 'application/json'},
+        body: JSON.stringify({email: emailCheck})
+      })
+      .then(res => res.json())
+      .then(data => {
+        if(data){
+          setIsAdmin(true);
+        }
+        
+        console.log(isAdmin);
+  
+      })
+      
+      if(isAdmin===false) {
+          setAdminMenuStyle(['none'])
+      } 
+    }, [])
+    
+    console.log('Style', adminMenuStyle)
+    // console.log('Admin', adminMenuStyle);
+     
+    const handleLogOut =()=> {
+        setLoggedInUser({});
+        sessionStorage.setItem('token', '');
+        history.push('/')
+    }
+
     
     return (
         <div className="sidebar d-flex flex-column justify-content-between col-md-2 py-5 px-4" style={{ height: "100vh" }}>
@@ -39,7 +77,7 @@ const Sidebar = () => {
                     </li>
                 </div>
 
-                <div className='admin-functions'>
+                <div className='admin-functions' style={adminMenuStyle}>
                     <div className='mb-3'>
                         <FontAwesomeIcon style={{ fontSize: '25px' }} className='text-white' icon={faCog} /> <span style={{ fontSize: '20px' }} className='text-white'> Admin Section</span>
                     </div>
@@ -74,7 +112,7 @@ const Sidebar = () => {
                 </div>
             </ul>
             <div>
-                <Link to="/" className="text-white"><FontAwesomeIcon icon={faSignOutAlt} /> <span>Logout</span></Link>
+                <Link to="/" className="text-white"><FontAwesomeIcon icon={faSignOutAlt} /> <span onClick={handleLogOut}>Logout</span></Link>
             </div>
         </div>
     );

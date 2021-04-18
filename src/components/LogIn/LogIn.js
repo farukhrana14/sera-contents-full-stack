@@ -8,6 +8,7 @@ import "firebase/auth";
 import firebaseConfig from './firebaseConfig';
 import google from '../../images/googleIcon.png';
 
+
 const LogIn = () => {
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
   
@@ -33,21 +34,8 @@ const LogIn = () => {
     });
   }
 
-    const [isAdmin, setIsAdmin] = useState([]);
-    fetch('https://sera-contents.herokuapp.com/isAdmin', {
-      method: 'POST',
-      headers:  {'Content-Type': 'application/json'},
-      body: JSON.stringify({email: loggedInUser.email})
-    })
-    .then(res => res.json())
-    .then(data => {
-      if(data){
-        setIsAdmin(true);
-      } else {
-        setIsAdmin(false);
-      }
-    sessionStorage.setItem('admin', isAdmin)
-    })
+   
+    
       
 
 

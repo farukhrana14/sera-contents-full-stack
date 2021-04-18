@@ -1,9 +1,23 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './NavBar.css';
-import {Link} from 'react-router-dom';
+import {Link, useHistory} from 'react-router-dom';
 import brandImage from '../../../images/brand.png';
+import { UserContext } from '../../../App';
 
 const NavBar = () => {
+ 
+   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+   const history = useHistory();
+   const handleLogInOut = () => {
+      loggedInUser.email ? handleLogOut() : history.push('/login')
+   }
+
+   const handleLogOut = () => {
+      setLoggedInUser({});
+      sessionStorage.setItem('token', '');
+      history.push('/')
+   }
+
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-dark">
          <Link className="navbar-brand" to="/"><img style={{width: '40px', marginLeft: '50px'}} src={brandImage} alt=""/>  </Link>
@@ -18,7 +32,7 @@ const NavBar = () => {
          <Link className="nav-link mr-5 text-white" to="/">Home</Link>
       </li>
       <li className="nav-item">
-         <Link className="nav-link mr-5 text-white" to="/login">Login</Link>
+         <Link onClick={handleLogInOut} className="nav-link mr-5 text-white" to="/login">{loggedInUser.email ? 'Logout' : 'Login'}</Link>
       </li>
       <li className="nav-item">
          <Link className="nav-link mr-5 text-white" to="/dashboard">Dashboard</Link>
