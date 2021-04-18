@@ -5,11 +5,12 @@ import { useForm } from "react-hook-form";
 import axios from 'axios';
 
 
-const AddReview = () => {
-
+const AddService = () => {
+    
     const { register, handleSubmit, errors } = useForm();
-    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [imageURL, setIMageURL] = useState(null);
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    
 
     const handleImageUpload = (event) => {
         // console.log(event.target.files[0]);
@@ -25,25 +26,30 @@ const AddReview = () => {
           console.log(error);
         });
     }
-   
+
+    // console.log(imageURL);
     const onSubmit = (data, e) => {
-        const reviewData = {
-            userName: data.userName,
+        const serviceData = {
+            name: data.serviceTitle,
             description: data.description,
+            price: data.price,
             photoURL: imageURL
         }
 
-        fetch('http://localhost:5000/addreview', {
+        fetch('http://localhost:5000/addservice', {
             method: 'POST',
             headers:    { 'Content-Type': 'application/json' },
-            body:   JSON.stringify(reviewData)
+            body:   JSON.stringify(serviceData)
         })
         .then(res => res.json())
         .then(res => console.log(res))
         setIMageURL(null);
         e.target.reset();
+    };
 
-    }
+
+    
+
 
 
     return (
@@ -54,12 +60,12 @@ const AddReview = () => {
 
 
             <div className="col-md-8 col-sm-12 col-12" >
-                <h2 className='d-flex justify-content-center text-brand mt-3'>Add Review</h2>
+                <h2 className='d-flex justify-content-center text-brand mt-3'>Add Service</h2>
 
                 <form className='p-5' onSubmit={handleSubmit(onSubmit)}>
                     <div className="form-group">
-                        <input type="text" ref={register({ required: true })} name="userName" placeholder='Your Name' className="form-control"  />
-                        {errors.name && <span className="text-danger">Service Name is required</span>}
+                        <input type="text" ref={register({ required: true })} name="serviceTitle" placeholder='Name of Service' className="form-control" />
+                        {errors.name && <span className="text-danger"> Name is required</span>}
                     </div>
 
                     <div className="form-group">
@@ -67,10 +73,12 @@ const AddReview = () => {
                         {errors.email && <span className="text-danger">Description is required</span>}
                     </div>
 
-                                      
-                    <br/>
+                    <div className="form-group">
+                        <input type="text" ref={register({ required: true })} name="price" placeholder='Price of Service' className="form-control" />
+                        {errors.email && <span className="text-danger">Price is required</span>}
+                    </div>
 
-                    <span>Your Image</span> <br/>
+                    <span>Image of Service</span> <br/>
                     <input name="inputFile" type="file" onChange={handleImageUpload} ref={register({ required: true })} />
                         {errors.name && <span className="error">Image is required</span>}
                     <br/>
@@ -80,6 +88,7 @@ const AddReview = () => {
                        imageURL && <input type="submit" className="btn btn-primary"></input>
                     }
                     </div>
+                
                 </form>
             </div>
 
@@ -88,4 +97,4 @@ const AddReview = () => {
     );
 };
 
-export default AddReview;
+export default AddService;

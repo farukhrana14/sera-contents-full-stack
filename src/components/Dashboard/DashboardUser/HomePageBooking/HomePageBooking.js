@@ -24,8 +24,8 @@ const HomePageBooking = () => {
     const onSubmit = data => {
         setShippingData(data);
         console.log(data);
- };
-
+    };
+ 
  
  const handlePaymentSuccess = (paymentInfo) => {
     const orderDetails = {name: loggedInUser.name, email: loggedInUser.email, orderTime:new Date(), service: selectedService.name, price: selectedService.price, card: paymentInfo?.cardInfo?.brand, status: 'pending'}; 

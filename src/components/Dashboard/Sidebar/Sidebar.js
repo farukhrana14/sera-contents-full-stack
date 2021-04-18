@@ -57,13 +57,13 @@ const Sidebar = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link to="/adminservice" className="text-white" >
-                                <FontAwesomeIcon icon={faNewspaper} /> <span>Services</span>
+                            <Link to="/addservice" className="text-white" >
+                                <FontAwesomeIcon icon={faNewspaper} /> <span>Add Services</span>
                             </Link>
                         </li>
                         <li>
                             <Link to="/makeadmin" className="text-white" >
-                                <FontAwesomeIcon icon={faUserShield} /> <span>Admins</span>
+                                <FontAwesomeIcon icon={faUserShield} /> <span>Make Admin</span>
                             </Link>
                         </li>
                     </div>

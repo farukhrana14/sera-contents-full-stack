@@ -16,7 +16,7 @@ const ServiceDetail = ({service}) => {
     return (
         <AnimationWrapper className='card col-md-4 text-center bg-light mb-5 px-3 pt-3'>
         
-            <img style={{height: '100px'}} src={service.img} alt=''/>
+            <img className='img-fluid' style={{height: '100px', width: '80px', margin: 'auto'}} src={service.photoURL} alt=''/>
             <h4 className='text-brand mt-3 mb-3'>{service.name}</h4>
             <p className='service-description mb-5' > {service.description} </p>
             <h3 className='text-brand' style={{fontSize: '40px', fontWeight: '700'}}  >${service.price}</h3>
