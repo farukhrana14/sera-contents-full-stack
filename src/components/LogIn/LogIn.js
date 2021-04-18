@@ -34,7 +34,7 @@ const LogIn = () => {
   }
 
     const [isAdmin, setIsAdmin] = useState([]);
-    fetch('http://localhost:5000/isAdmin', {
+    fetch('https://warm-anchorage-26650.herokuapp.com/isAdmin', {
       method: 'POST',
       headers:  {'Content-Type': 'application/json'},
       body: JSON.stringify({email: loggedInUser.email})

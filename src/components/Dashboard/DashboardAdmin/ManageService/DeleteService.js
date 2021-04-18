@@ -8,7 +8,7 @@ const DeleteService = () => {
     const [deleteState, setDeleteState] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/allServices')
+        fetch('https://warm-anchorage-26650.herokuapp.com/allServices')
             .then(res => res.json())
             .then(data => setServices(data))
     }, [deleteState])
@@ -17,7 +17,7 @@ const DeleteService = () => {
 
     const handleDelete =(id)=>{
         console.log('clientSide', id);
-        fetch(`http://localhost:5000/delservice?id=${id}`, {
+        fetch(`https://warm-anchorage-26650.herokuapp.com/delservice?id=${id}`, {
             method: 'POST',
             headers:    {'Content-Type': 'application/json'},
             body:   JSON.stringify() 

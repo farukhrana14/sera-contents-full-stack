@@ -36,7 +36,7 @@ const AddService = () => {
             photoURL: imageURL
         }
 
-        fetch('http://localhost:5000/addservice', {
+        fetch('https://warm-anchorage-26650.herokuapp.com/addservice', {
             method: 'POST',
             headers:    { 'Content-Type': 'application/json' },
             body:   JSON.stringify(serviceData)

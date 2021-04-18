@@ -20,7 +20,7 @@ const BookingList = () => {
 
     
     useEffect(() => {
-        fetch('http://localhost:5000/showorders')
+        fetch('https://warm-anchorage-26650.herokuapp.com/showorders')
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [])
