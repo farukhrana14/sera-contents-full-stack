@@ -25,11 +25,7 @@ const Sidebar = () => {
                                 <FontAwesomeIcon icon={faGripHorizontal} /> <span>Dashboard</span>
                             </Link>
                         </li>
-                        <li>
-                            <Link to="/dashboardbooking" className="text-white">
-                                <FontAwesomeIcon icon={faPlusSquare} /> <span>Add Booking</span>
-                            </Link>
-                        </li>
+                      
                         <li>
                             <Link to="/bookinglist" className="text-white">
                                 <FontAwesomeIcon icon={faShoppingCart} /> <span>All Bookings</span>
