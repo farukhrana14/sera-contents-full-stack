@@ -14,10 +14,11 @@ import Dashboard from './components/Dashboard/Dashboard';
 import BookingList from './components/Dashboard/DashboardUser/BookingList/BookingList';
 import AddReview from './components/Dashboard/DashboardUser/Review/AddReview';
 import AdminReviews from './components/Dashboard/DashboardAdmin/AdminReviews/AdminReviews';
-import AddService from './components/Dashboard/DashboardAdmin/AdminServices/AddService';
+import AddService from './components/Dashboard/DashboardAdmin/ManageService/AddService';
 import MakeAdmin from './components/Dashboard/DashboardAdmin/MakeAdmin/MakeAdmin';
 import DashboardBooking from './components/Dashboard/DashboardUser/DashboardBooking/DashboardBooking';
 import HomePageBooking from './components/Dashboard/DashboardUser/HomePageBooking/HomePageBooking';
+import DeleteService from './components/Dashboard/DashboardAdmin/ManageService/DeleteService';
 
 export const UserContext = createContext();
 export const ServiceContext = createContext();
@@ -53,12 +54,16 @@ function App() {
             <AddReview/>
           </Route>
 
-          <Route exact path='/adminreviews'>
+          <Route exact path='/deletereviews'>
             <AdminReviews/>
           </Route>
 
           <Route exact path='/addservice'>
             <AddService/>
+          </Route>
+
+          <Route exact path='/deleteservice'>
+            <DeleteService/>
           </Route>
 
           <Route exact path='/makeadmin'>

@@ -1,27 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import Sidebar from '../../Sidebar/Sidebar';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faTrashAlt} from '@fortawesome/free-solid-svg-icons';
 
-
-
-
-const AdminReviews = () => {
-
-    const [reviews, setReviews] = useState([]);
+const DeleteService = () => {
+    const [services, setServices] = useState([]);
     const [deleteState, setDeleteState] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/allReviews')
+        fetch('http://localhost:5000/allServices')
             .then(res => res.json())
-            .then(data => setReviews(data))
+            .then(data => setServices(data))
     }, [deleteState])
 
-    console.log(reviews);
+    console.log(services);
 
     const handleDelete =(id)=>{
         console.log('clientSide', id);
-        fetch(`http://localhost:5000/delreview?id=${id}`, {
+        fetch(`http://localhost:5000/delservice?id=${id}`, {
             method: 'POST',
             headers:    {'Content-Type': 'application/json'},
             body:   JSON.stringify() 
@@ -38,7 +34,7 @@ const AdminReviews = () => {
                 <Sidebar />
             </div>
             <div className="col-md-9 col-sm-6 col-12">
-                <h3 className='d-flex justify-content-center text-brand mt-3'>All Reviews and Delete </h3>
+                <h3 className='d-flex justify-content-center text-brand mt-3'>Remove Products </h3>
 
                 <div className="products-table">
                     <table style={{margin: 'auto', width: '850px'}}>
@@ -46,15 +42,17 @@ const AdminReviews = () => {
                             <tr className="table-header">
                                 <th className="name-column">Name</th>
                                 <th className="mx-5 px-3">Description</th>
+                                <th className="mx-3" style={{width: '100px'}}>Price</th>
                                 <th className="action-column">Delete</th>
                             </tr>
                             {
 
-                                reviews && reviews.map(review =>
-                                    <tr key={review._id}>
-                                        <td>{review.userName}</td>
-                                        <td>{review.description}</td>
-                                        <td><FontAwesomeIcon onClick={() => handleDelete(review._id)} className="trash-svg" color="#DC143C" size='2x' icon={faTrashAlt} /> </td>
+                                services && services.map(service =>
+                                    <tr key={service._id}>
+                                        <td>{service.name}</td>
+                                        <td>{service.description}</td>
+                                        <td className="price-column"> <span>$</span> {service.price}</td>
+                                        <td><FontAwesomeIcon onClick={() => handleDelete(service._id)} className="trash-svg" color="#DC143C" size='2x' icon={faTrashAlt} /> </td>
                                     </tr>
                                 )
 
@@ -68,10 +66,8 @@ const AdminReviews = () => {
                     </table>
                 </div>
             </div>
-
-
         </div>
     );
 };
 
-export default AdminReviews;
+export default DeleteService; <h1>ManageService</h1>
