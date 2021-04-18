@@ -12,7 +12,7 @@ const AdminReviews = () => {
     const [deleteState, setDeleteState] = useState([]);
 
     useEffect(() => {
-        fetch('https://warm-anchorage-26650.herokuapp.com/allReviews')
+        fetch('https://sera-contents.herokuapp.com/allReviews')
             .then(res => res.json())
             .then(data => setReviews(data))
     }, [deleteState])
@@ -21,7 +21,7 @@ const AdminReviews = () => {
 
     const handleDelete =(id)=>{
         console.log('clientSide', id);
-        fetch(`https://warm-anchorage-26650.herokuapp.com/delreview?id=${id}`, {
+        fetch(`https://sera-contents.herokuapp.com/delreview?id=${id}`, {
             method: 'POST',
             headers:    {'Content-Type': 'application/json'},
             body:   JSON.stringify() 

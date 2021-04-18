@@ -30,7 +30,7 @@ const HomePageBooking = () => {
  const handlePaymentSuccess = (paymentInfo) => {
     const orderDetails = {name: loggedInUser.name, email: loggedInUser.email, orderTime:new Date(), service: selectedService.name, price: selectedService.price, card: paymentInfo?.cardInfo?.brand, status: 'pending'}; 
         
-    fetch ('https://warm-anchorage-26650.herokuapp.com/addOrder', {
+    fetch ('https://sera-contents.herokuapp.com/addOrder', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json'},
         body: JSON.stringify(orderDetails)

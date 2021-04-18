@@ -4,7 +4,6 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
 import Home from './components/HomePage/Home/Home';
 import { createContext, useState } from 'react';
@@ -16,7 +15,6 @@ import AddReview from './components/Dashboard/DashboardUser/Review/AddReview';
 import AdminReviews from './components/Dashboard/DashboardAdmin/AdminReviews/AdminReviews';
 import AddService from './components/Dashboard/DashboardAdmin/ManageService/AddService';
 import MakeAdmin from './components/Dashboard/DashboardAdmin/MakeAdmin/MakeAdmin';
-import DashboardBooking from './components/Dashboard/DashboardUser/DashboardBooking/DashboardBooking';
 import HomePageBooking from './components/Dashboard/DashboardUser/HomePageBooking/HomePageBooking';
 import DeleteService from './components/Dashboard/DashboardAdmin/ManageService/DeleteService';
 
@@ -38,37 +36,33 @@ function App() {
             <Dashboard/>
           </PrivateRoute>
 
-          <Route exact path='/dashboardbooking'>
-            <DashboardBooking/>
-          </Route>
-
           <PrivateRoute exact path='/homepagebooking'>
             <HomePageBooking/>
           </PrivateRoute>
 
-          <Route exact path='/bookinglist'>
+          <PrivateRoute exact path='/bookinglist'>
             <BookingList/>
-          </Route>
+          </PrivateRoute>
 
-          <Route exact path='/addReview'>
+          <PrivateRoute exact path='/addReview'>
             <AddReview/>
-          </Route>
+          </PrivateRoute>
 
-          <Route exact path='/deletereviews'>
+          <PrivateRoute exact path='/deletereviews'>
             <AdminReviews/>
-          </Route>
+          </PrivateRoute>
 
-          <Route exact path='/addservice'>
+          <PrivateRoute exact path='/addservice'>
             <AddService/>
-          </Route>
+          </PrivateRoute>
 
-          <Route exact path='/deleteservice'>
+          <PrivateRoute exact path='/deleteservice'>
             <DeleteService/>
-          </Route>
+          </PrivateRoute>
 
-          <Route exact path='/makeadmin'>
+          <PrivateRoute exact path='/makeadmin'>
             <MakeAdmin/>
-          </Route>
+          </PrivateRoute>
           
           <Route exact path='/login'>
             <LogIn/>

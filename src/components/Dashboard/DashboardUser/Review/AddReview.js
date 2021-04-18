@@ -33,7 +33,7 @@ const AddReview = () => {
             photoURL: imageURL
         }
 
-        fetch('https://warm-anchorage-26650.herokuapp.com/addreview', {
+        fetch('https://sera-contents.herokuapp.com/addreview', {
             method: 'POST',
             headers:    { 'Content-Type': 'application/json' },
             body:   JSON.stringify(reviewData)

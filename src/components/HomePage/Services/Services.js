@@ -9,12 +9,13 @@ const Services = () => {
     const [services, setServices] = useState([]);
 
     useEffect(()=>{
-        fetch('https://warm-anchorage-26650.herokuapp.com/allServices')
+        fetch('https://sera-contents.herokuapp.com/allServices')
         .then(res=> res.json())
         .then(data => setServices(data))
         
     }, [])
-   
+    
+    console.log(services);
 
     return (
         <section id='services' className='pt-3'  style={{backgroundColor: '#0088FF'}}>

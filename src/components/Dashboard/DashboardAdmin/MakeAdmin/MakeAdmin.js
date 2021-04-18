@@ -18,7 +18,7 @@ const MakeAdmin = () => {
 
 
         if (adminData.length !== 0) {
-            fetch('https://warm-anchorage-26650.herokuapp.com/makeadmin', {
+            fetch('https://sera-contents.herokuapp.com/makeadmin', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(adminData)
