@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { createContext, useContext, useState } from 'react';
 import BuiltForYou from '../BuiltForYou/BuiltForYou';
 import ContactUs from '../ContactUs/ContactUs';
 import Footer from '../Footer/Footer';
@@ -9,7 +9,12 @@ import Services from '../Services/Services';
 import TrustedByClients from '../TrustedByClients/TrustedByClients';
 import YouCountOn from '../YouCountOn/YouCountOn';
 
+
+
 const Home = () => {
+
+   
+
     return (
         <div>
             <NavBar/>

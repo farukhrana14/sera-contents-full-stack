@@ -26,7 +26,7 @@ const Sidebar = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link to="/booking" className="text-white">
+                            <Link to="/dashboardbooking" className="text-white">
                                 <FontAwesomeIcon icon={faPlusSquare} /> <span>Add Booking</span>
                             </Link>
                         </li>

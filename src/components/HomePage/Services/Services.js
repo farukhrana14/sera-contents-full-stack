@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import articleImg from '../../../images/services/articles.svg';
 import blogImg from '../../../images/services/blog-posts.svg';
 import productImg from '../../../images/services/product-description.svg';
@@ -27,6 +27,9 @@ const serviceData = [
 
 
 const Services = () => {
+    const [selectedService, setSelectedService] = useState({});
+   
+
     return (
         <section id='services' className='pt-3'  style={{backgroundColor: '#0088FF'}}>
             <div className='text-center'>
@@ -36,7 +39,7 @@ const Services = () => {
             <div className='d-flex justify-content-center'>
                 <div className = 'w-75 row mt-3'>
                     {
-                        serviceData.map(service => <ServiceDetail service={service} key={service.name}></ServiceDetail>)
+                        serviceData.map(service => <ServiceDetail service={service} key={service.name}></ServiceDetail> )
                     }
                 </div>
             </div>

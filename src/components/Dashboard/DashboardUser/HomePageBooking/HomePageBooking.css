@@ -1,0 +1,20 @@
+/* .card-form > form {
+    width: 450px;
+    border: 1px solid blue !important;
+}
+/* 
+.card-form > label {
+    width: 450px;
+} */
+
+ 
+
+.StripeElement {
+    width: 450px;
+        
+}
+
+.StripeElement > button {
+    display: block !important;
+    border: 1px solid blue;
+}

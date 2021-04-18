@@ -7,25 +7,28 @@ import {
   Link
 } from "react-router-dom";
 import Home from './components/HomePage/Home/Home';
-import Booking from './components/Dashboard/DashboardUser/Booking/Booking';
 import { createContext, useState } from 'react';
 import LogIn from './components/LogIn/LogIn';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Dashboard from './components/Dashboard/Dashboard';
 import BookingList from './components/Dashboard/DashboardUser/BookingList/BookingList';
 import AddReview from './components/Dashboard/DashboardUser/Review/AddReview';
-import Reviews from './components/HomePage/Reviews/Reviews';
 import AdminReviews from './components/Dashboard/DashboardAdmin/AdminReviews/AdminReviews';
 import AdminService from './components/Dashboard/DashboardAdmin/AdminServices/AdminService';
 import MakeAdmin from './components/Dashboard/DashboardAdmin/MakeAdmin/MakeAdmin';
+import DashboardBooking from './components/Dashboard/DashboardUser/DashboardBooking/DashboardBooking';
+import HomePageBooking from './components/Dashboard/DashboardUser/HomePageBooking/HomePageBooking';
 
 export const UserContext = createContext();
+export const ServiceContext = createContext();
 
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({});
+  const [selectedService, setSelectedService] = useState({});
 
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
+      <ServiceContext.Provider value={[selectedService, setSelectedService]}>
       <Router>
         <Switch>
 
@@ -34,9 +37,13 @@ function App() {
             <Dashboard/>
           </PrivateRoute>
 
-          <Route exact path='/booking'>
-            <Booking />
+          <Route exact path='/dashboardbooking'>
+            <DashboardBooking/>
           </Route>
+
+          <PrivateRoute exact path='/homepagebooking'>
+            <HomePageBooking/>
+          </PrivateRoute>
 
           <Route exact path='/bookinglist'>
             <BookingList/>
@@ -72,6 +79,7 @@ function App() {
 
         </Switch>
       </Router>
+      </ServiceContext.Provider>
     </UserContext.Provider>
 
   );
