@@ -11,19 +11,19 @@ import logo3 from '../../../images/clients/youtube.png';
 const reviewsData = [
     {
         userName: 'Will Jansen',
-        userImg: wilsonImg,
+        photoURL: wilsonImg,
         coLogo: logo1,
         description: 'Collaboration with Sera Content has enabled us to unlock tremendous potential in multiple areas of our operations. Their insightful contents about complex problems and ability to execute improvements based on these insights has been impressive.'
     },
     {
         userName: 'Kazuki Baba',
-        userImg: kazukiImg,
+        photoURL: kazukiImg,
         coLogo: logo2,
         description: 'Our partnership with Sera Content enables us to accelerate and de-risk the launch of new sites and services and to optimize existing ones. Within days, we are able to drive loads of traffics to our sites across critical business metric.'
     },
     {
         userName: 'Arthur Orduna',
-        userImg: arthurImg,
+        photoURL: arthurImg,
         coLogo: logo3,
         description: 'Sera Contents provides impactful contents that allows us to measure KPIs, and in turn improve our toolkit of services for future projects. The company’s work with us is crucial for developing new sites and drive traffics serve.'
     }
@@ -31,7 +31,7 @@ const reviewsData = [
 
 const Reviews = () => {
 
-    const [reviews, setReviews] = useState([]);
+    let [reviews, setReviews] = useState([]);
 
     useEffect(()=>{
         fetch('https://sera-contents.herokuapp.com/allReviews')
@@ -40,6 +40,10 @@ const Reviews = () => {
 
     },[])
     console.log(reviews);
+
+    if(reviews.length === 0){
+        reviews = reviewsData;
+    }
 
     return (
         <section className="reviews my-5 pt-5">
@@ -52,6 +56,9 @@ const Reviews = () => {
                     {
                         reviews && reviews.map(review => <ReviewSingle review={review} key={review.userName}> </ReviewSingle>)
                     }
+
+                    
+
                 </div>
             </div>
         </section>
