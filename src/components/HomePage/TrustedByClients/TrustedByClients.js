@@ -50,6 +50,7 @@ const TrustedByClients = () => {
     return (
         <section className='clientsTrusted'>
             <div  className='container'>
+                <h2 className='text-brand text-center pt-3'>Our Clients</h2>
                 <div className='d-flex justify-content-center'>   
                     <div  className='row pt-5'>
                     {
