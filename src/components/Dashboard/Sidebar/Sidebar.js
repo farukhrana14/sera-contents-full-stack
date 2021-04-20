@@ -9,14 +9,13 @@ import { RoleContext, UserContext } from '../../../App';
 
 const Sidebar = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
-    const [adminMenuStyle, setAdminMenuStyle] = useState([]);
     const [adminRole, setAdminRole] = useContext(RoleContext);
     const history = useHistory();
 
     console.log(adminRole);
-    // if(adminRole !== true){
-    //     setAdminRole(false)
-    // }
+    if(adminRole !== true){
+        setAdminRole(false)
+    }
 
      
     const handleLogOut =()=> {
