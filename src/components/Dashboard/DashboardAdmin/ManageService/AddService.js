@@ -37,7 +37,7 @@ const AddService = () => {
             photoURL: imageURL
         }
 
-        fetch('http://localhost:5000/addservice', {
+        fetch('https://powerful-reef-15346.herokuapp.com/addservice', {
             method: 'POST',
             headers:    { 'Content-Type': 'application/json' },
             body:   JSON.stringify(serviceData)

@@ -28,7 +28,7 @@ const UpdateService = () => {
         // console.log('clicked:', id);
         const updateData = {id: id, status: newStatus};
         if(newStatus){
-            fetch('http://localhost:5000/updatestatus', {
+            fetch('https://powerful-reef-15346.herokuapp.com/updatestatus', {
                 method: 'POST',
                 headers:    {'Content-Type': 'application/json'},
                 body:   JSON.stringify(updateData)   
@@ -39,15 +39,12 @@ const UpdateService = () => {
                 console.log('Updated:', data)
             })    
         }
-
-        
-                
     }
 
 
 
     useEffect(() => {
-        fetch('http://localhost:5000/showorders')
+        fetch('https://powerful-reef-15346.herokuapp.com/showorders')
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [updateDone])

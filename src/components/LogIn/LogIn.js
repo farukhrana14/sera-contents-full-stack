@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './LogIn.css';
 import { useHistory, useLocation } from 'react-router';
 import { useContext } from 'react';
-import { UserContext } from '../../App';
+import { RoleContext, UserContext } from '../../App';
 import firebase from "firebase/app";
 import "firebase/auth";
 import firebaseConfig from './firebaseConfig';
@@ -11,6 +11,7 @@ import google from '../../images/googleIcon.png';
 
 const LogIn = () => {
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+  const [adminRole, setAdminRole] = useContext(RoleContext);
   
 
   const history = useHistory();
@@ -34,7 +35,23 @@ const LogIn = () => {
     });
   }
 
-   
+  const checkAdmin =() => {
+    fetch('https://powerful-reef-15346.herokuapp.com/isadmin', {
+        method: 'POST',
+        headers:  {'Content-Type': 'application/json'},
+        body: JSON.stringify({email: loggedInUser.email})
+      })
+      .then(res => res.json())
+      .then(data => {
+        if(data){
+          setAdminRole(true);
+        }
+        
+      })
+  }
+  checkAdmin();
+  // console.log('User:', loggedInUser);
+  console.log('Role', adminRole);
     
       
 

@@ -5,46 +5,23 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserShield, faNewspaper, faTasks, faCartPlus, faThList, faShoppingCart, faCog, faSignOutAlt, faHome, faGripHorizontal } from '@fortawesome/free-solid-svg-icons';
 import { faFileAlt } from '@fortawesome/free-regular-svg-icons';
 import jwt_decode from "jwt-decode";
-import { UserContext } from '../../../App';
+import { RoleContext, UserContext } from '../../../App';
 
 const Sidebar = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [adminMenuStyle, setAdminMenuStyle] = useState([]);
-    const [isAdmin, setIsAdmin] = useState([]);
+    const [adminRole, setAdminRole] = useContext(RoleContext);
     const history = useHistory();
 
-    // const token = sessionStorage.getItem('token')
-    // const decodedToken = jwt_decode(token);
-    // // console.log(decodedToken.email, 'or', loggedInUser.email );
-    // const emailCheck = decodedToken.email || loggedInUser.email;
-    
-    // useEffect(()=> {
-         
-    // fetch('http://localhost:5000/isAdmin', {
-    //     method: 'POST',
-    //     headers:  {'Content-Type': 'application/json'},
-    //     body: JSON.stringify({email: emailCheck})
-    //   })
-    //   .then(res => res.json())
-    //   .then(data => {
-    //     if(data){
-    //       setIsAdmin(true);
-    //     }
-        
-    //     console.log(isAdmin);
-  
-    //   })
-      
-    //   if(isAdmin===false) {
-    //       setAdminMenuStyle(['none'])
-    //   } 
-    // }, [])
-    
-    // console.log('Style', adminMenuStyle)
-    // console.log('Admin', adminMenuStyle);
+    console.log(adminRole);
+    // if(adminRole !== true){
+    //     setAdminRole(false)
+    // }
+
      
     const handleLogOut =()=> {
         setLoggedInUser({});
+        setAdminRole({});
         sessionStorage.setItem('token', '');
         history.push('/')
     }
@@ -84,7 +61,7 @@ const Sidebar = () => {
                     </li>
                 </div>
 
-                <div className='admin-functions' style={adminMenuStyle}>
+                <div className='admin-functions' style={{display: adminRole ? 'block' : 'none'  }}>
                     <div className='mb-3'>
                         <FontAwesomeIcon style={{ fontSize: '25px' }} className='text-white' icon={faCog} /> <span style={{ fontSize: '20px' }} className='text-white'> Admin Section</span>
                     </div>

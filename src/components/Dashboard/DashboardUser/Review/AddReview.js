@@ -35,7 +35,7 @@ const AddReview = () => {
             photoURL: imageURL
         }
 
-        fetch('http://localhost:5000/addreview', {
+        fetch('https://powerful-reef-15346.herokuapp.com/addreview', {
             method: 'POST',
             headers:    { 'Content-Type': 'application/json' },
             body:   JSON.stringify(reviewData)

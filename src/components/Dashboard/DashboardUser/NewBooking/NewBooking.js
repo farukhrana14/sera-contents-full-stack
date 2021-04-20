@@ -19,7 +19,7 @@ const NewBooking = () => {
     const history = useHistory();
 
     useEffect(() => {
-        fetch('http://localhost:5000/allServices')
+        fetch('https://powerful-reef-15346.herokuapp.com/allservices')
             .then(res => res.json())
             .then(data => setServices(data))
     }, [])

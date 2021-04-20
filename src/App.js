@@ -19,75 +19,90 @@ import HomePageBooking from './components/Dashboard/DashboardUser/HomePageBookin
 import DeleteService from './components/Dashboard/DashboardAdmin/ManageService/DeleteService';
 import NewBooking from './components/Dashboard/DashboardUser/NewBooking/NewBooking';
 import UpdateService from './components/Dashboard/DashboardAdmin/ManageService/UpdateService';
+import PageNotFound from './components/PrivateRoute/PageNotFound';
+import NotAnAdmin from './components/PrivateRoute/NotAnAdmin';
 
 export const UserContext = createContext();
+export const RoleContext = createContext();
 export const ServiceContext = createContext();
 
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({});
+  const [adminRole, setAdminRole] = useState(false);
   const [selectedService, setSelectedService] = useState({});
 
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
       <ServiceContext.Provider value={[selectedService, setSelectedService]}>
-      <Router>
-        <Switch>
+        <RoleContext.Provider value={[adminRole, setAdminRole]}>
+          <Router>
+            <Switch>
 
-        
-        <PrivateRoute  path='/dashboard'>
-            <Dashboard/>
-          </PrivateRoute>
+            <PrivateRoute path='/restricted'>
+                <NotAnAdmin/>
+              </PrivateRoute>
 
-          <PrivateRoute exact path='/homepagebooking'>
-            <HomePageBooking/>
-          </PrivateRoute>
+              <PrivateRoute path='/dashboard'>
+                <Dashboard />
+              </PrivateRoute>
 
-          <PrivateRoute exact path='/newbooking'>
-            <NewBooking/>
-          </PrivateRoute>
+              <PrivateRoute exact path='/homepagebooking'>
+                <HomePageBooking />
+              </PrivateRoute>
 
-          <PrivateRoute exact path='/bookinglist'>
-            <BookingList/>
-          </PrivateRoute>
+              <PrivateRoute exact path='/newbooking'>
+                <NewBooking />
+              </PrivateRoute>
 
-          <PrivateRoute exact path='/addReview'>
-            <AddReview/>
-          </PrivateRoute>
+              <PrivateRoute exact path='/bookinglist'>
+                <BookingList />
+              </PrivateRoute>
 
-          <PrivateRoute exact path='/deletereviews'>
-            <AdminReviews/>
-          </PrivateRoute>
+              <PrivateRoute exact path='/addReview'>
+                <AddReview />
+              </PrivateRoute>
+              
+              {/* Admin Routes from here */}
+              <PrivateRoute exact path='/deletereviews'>
+                <AdminReviews />
+              </PrivateRoute>
 
-          <PrivateRoute exact path='/addservice'>
-            <AddService/>
-          </PrivateRoute>
+              <PrivateRoute exact path='/addservice'>
+                <AddService />
+              </PrivateRoute>
 
-          <PrivateRoute exact path='/updateservice'>
-            <UpdateService/>
-          </PrivateRoute>
+              <PrivateRoute exact path='/updateservice'>
+                <UpdateService />
+              </PrivateRoute>
 
-          <PrivateRoute exact path='/deleteservice'>
-            <DeleteService/>
-          </PrivateRoute>
+              <PrivateRoute exact path='/deleteservice'>
+                <DeleteService />
+              </PrivateRoute>
 
-          <PrivateRoute exact path='/makeadmin'>
-            <MakeAdmin/>
-          </PrivateRoute>
-          
-          <Route exact path='/login'>
-            <LogIn/>
-          </Route>
+              <PrivateRoute exact path='/makeadmin'>
+                <MakeAdmin />
+              </PrivateRoute>
 
-          <Route exact path='/home'>
-            <Home />
-          </Route>
+              {/* Routes Not Protected */}  
+              <Route exact path='/login'>
+                <LogIn />
+              </Route>
 
-          <Route exact path='/'>
-            <Home />
-          </Route>
+              <Route exact path='/home'>
+                <Home />
+              </Route>
 
-        </Switch>
-      </Router>
+              <Route exact path='/'>
+                <Home />
+              </Route>
+
+              <Route exact path='*'>
+                <PageNotFound/>
+              </Route>
+
+            </Switch>
+          </Router>
+        </RoleContext.Provider>
       </ServiceContext.Provider>
     </UserContext.Provider>
 

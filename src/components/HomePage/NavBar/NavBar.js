@@ -2,18 +2,21 @@ import React, { useContext } from 'react';
 import './NavBar.css';
 import {Link, useHistory} from 'react-router-dom';
 import brandImage from '../../../images/brand.png';
-import { UserContext } from '../../../App';
+import { RoleContext, UserContext } from '../../../App';
 
 const NavBar = () => {
  
    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+   const [adminRole, setAdminRole] = useContext(RoleContext);
    const history = useHistory();
+
    const handleLogInOut = () => {
       loggedInUser.email ? handleLogOut() : history.push('/login')
    }
 
    const handleLogOut = () => {
       setLoggedInUser({});
+      setAdminRole({});
       sessionStorage.setItem('token', '');
       history.push('/')
    }
