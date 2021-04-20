@@ -20,7 +20,7 @@ const BookingList = () => {
 
     
     useEffect(() => {
-        fetch('https://sera-contents.herokuapp.com/showorders')
+        fetch('https://ancient-coast-73356.herokuapp.com/showorders')
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [])

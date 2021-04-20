@@ -20,7 +20,7 @@ const Sidebar = () => {
     
     useEffect(()=> {
          
-    fetch('https://sera-contents.herokuapp.com//isAdmin', {
+    fetch('https://ancient-coast-73356.herokuapp.com//isAdmin', {
         method: 'POST',
         headers:  {'Content-Type': 'application/json'},
         body: JSON.stringify({email: emailCheck})

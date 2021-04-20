@@ -34,7 +34,7 @@ const Reviews = () => {
     let [reviews, setReviews] = useState([]);
 
     useEffect(()=>{
-        fetch('https://sera-contents.herokuapp.com/allReviews')
+        fetch('https://ancient-coast-73356.herokuapp.com/allReviews')
         .then(res=> res.json())
         .then(data => setReviews(data))
 

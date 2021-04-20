@@ -36,7 +36,7 @@ const AddService = () => {
             photoURL: imageURL
         }
 
-        fetch('https://sera-contents.herokuapp.com/addservice', {
+        fetch('https://ancient-coast-73356.herokuapp.com/addservice', {
             method: 'POST',
             headers:    { 'Content-Type': 'application/json' },
             body:   JSON.stringify(serviceData)
