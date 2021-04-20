@@ -28,7 +28,7 @@ const UpdateService = () => {
         // console.log('clicked:', id);
         const updateData = {id: id, status: newStatus};
         if(newStatus){
-            fetch('https://powerful-reef-15346.herokuapp.com/updatestatus', {
+            fetch('https://fathomless-river-81170.herokuapp.com/updatestatus', {
                 method: 'POST',
                 headers:    {'Content-Type': 'application/json'},
                 body:   JSON.stringify(updateData)   
@@ -44,7 +44,7 @@ const UpdateService = () => {
 
 
     useEffect(() => {
-        fetch('https://powerful-reef-15346.herokuapp.com/showorders')
+        fetch('https://fathomless-river-81170.herokuapp.com/showorders')
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [updateDone])

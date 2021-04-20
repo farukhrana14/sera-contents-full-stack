@@ -37,7 +37,7 @@ const AddService = () => {
             photoURL: imageURL
         }
 
-        fetch('https://powerful-reef-15346.herokuapp.com/addservice', {
+        fetch('https://fathomless-river-81170.herokuapp.com/addservice', {
             method: 'POST',
             headers:    { 'Content-Type': 'application/json' },
             body:   JSON.stringify(serviceData)

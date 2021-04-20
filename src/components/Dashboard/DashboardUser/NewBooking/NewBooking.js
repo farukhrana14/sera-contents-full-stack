@@ -19,7 +19,7 @@ const NewBooking = () => {
     const history = useHistory();
 
     useEffect(() => {
-        fetch('https://powerful-reef-15346.herokuapp.com/allservices')
+        fetch('https://fathomless-river-81170.herokuapp.com/allservices')
             .then(res => res.json())
             .then(data => setServices(data))
     }, [])

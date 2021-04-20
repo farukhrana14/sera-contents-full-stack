@@ -29,7 +29,7 @@ const HomePageBooking = () => {
  const handlePaymentSuccess = (paymentInfo) => {
     const orderDetails = {name: loggedInUser.name, email: loggedInUser.email, orderTime:new Date(), service: selectedService.name, price: selectedService.price, card: paymentInfo?.cardInfo?.brand, status: 'pending'}; 
         
-    fetch ('https://powerful-reef-15346.herokuapp.com/addorder', {
+    fetch ('https://fathomless-river-81170.herokuapp.com/addorder', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json'},
         body: JSON.stringify(orderDetails)

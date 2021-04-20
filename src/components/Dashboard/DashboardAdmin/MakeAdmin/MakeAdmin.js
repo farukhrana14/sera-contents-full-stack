@@ -18,7 +18,7 @@ const MakeAdmin = () => {
 
 
         if (adminData.length !== 0) {
-            fetch('https://powerful-reef-15346.herokuapp.com/makeadmin', {
+            fetch('https://fathomless-river-81170.herokuapp.com/makeadmin', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(adminData)

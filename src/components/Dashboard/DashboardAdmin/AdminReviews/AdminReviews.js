@@ -13,7 +13,7 @@ const AdminReviews = () => {
     const [deleteState, setDeleteState] = useState([]);
 
     useEffect(() => {
-        fetch('https://powerful-reef-15346.herokuapp.com/allreviews')
+        fetch('https://fathomless-river-81170.herokuapp.com/allreviews')
             .then(res => res.json())
             .then(data => setReviews(data))
     }, [deleteState])
@@ -22,7 +22,7 @@ const AdminReviews = () => {
 
     const handleDelete =(id)=>{
         // console.log('clientSide', id);
-        fetch(`https://powerful-reef-15346.herokuapp.com/delreview?id=${id}`, {
+        fetch(`https://fathomless-river-81170.herokuapp.com/delreview?id=${id}`, {
             method: 'POST',
             headers:    {'Content-Type': 'application/json'},
             body:   JSON.stringify() 
