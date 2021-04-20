@@ -13,34 +13,34 @@ const Sidebar = () => {
     const [isAdmin, setIsAdmin] = useState([]);
     const history = useHistory();
 
-    const token = sessionStorage.getItem('token')
-    const decodedToken = jwt_decode(token);
-    // console.log(decodedToken.email, 'or', loggedInUser.email );
-    const emailCheck = decodedToken.email || loggedInUser.email;
+    // const token = sessionStorage.getItem('token')
+    // const decodedToken = jwt_decode(token);
+    // // console.log(decodedToken.email, 'or', loggedInUser.email );
+    // const emailCheck = decodedToken.email || loggedInUser.email;
     
-    useEffect(()=> {
+    // useEffect(()=> {
          
-    fetch('https://ancient-coast-73356.herokuapp.com//isAdmin', {
-        method: 'POST',
-        headers:  {'Content-Type': 'application/json'},
-        body: JSON.stringify({email: emailCheck})
-      })
-      .then(res => res.json())
-      .then(data => {
-        if(data){
-          setIsAdmin(true);
-        }
+    // fetch('http://localhost:5000/isAdmin', {
+    //     method: 'POST',
+    //     headers:  {'Content-Type': 'application/json'},
+    //     body: JSON.stringify({email: emailCheck})
+    //   })
+    //   .then(res => res.json())
+    //   .then(data => {
+    //     if(data){
+    //       setIsAdmin(true);
+    //     }
         
-        console.log(isAdmin);
+    //     console.log(isAdmin);
   
-      })
+    //   })
       
-      if(isAdmin===false) {
-          setAdminMenuStyle(['none'])
-      } 
-    }, [])
+    //   if(isAdmin===false) {
+    //       setAdminMenuStyle(['none'])
+    //   } 
+    // }, [])
     
-    console.log('Style', adminMenuStyle)
+    // console.log('Style', adminMenuStyle)
     // console.log('Admin', adminMenuStyle);
      
     const handleLogOut =()=> {

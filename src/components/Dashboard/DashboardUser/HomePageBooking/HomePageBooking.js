@@ -1,13 +1,10 @@
 import React, { useContext, useState } from 'react';
-import { useLocation } from 'react-router';
 import { UserContext } from '../../../../App';
 import Sidebar from '../../Sidebar/Sidebar';
 import { useForm } from "react-hook-form";
 import './HomePageBooking.css'; 
 import PaymentProcess from '../PaymentProcess/PaymentProcess';
-import { faUserAltSlash } from '@fortawesome/free-solid-svg-icons';
 import { ServiceContext } from '../../../../App';
-import { Redirect, Route} from 'react-router-dom';
 
 
 
@@ -30,7 +27,7 @@ const HomePageBooking = () => {
  const handlePaymentSuccess = (paymentInfo) => {
     const orderDetails = {name: loggedInUser.name, email: loggedInUser.email, orderTime:new Date(), service: selectedService.name, price: selectedService.price, card: paymentInfo?.cardInfo?.brand, status: 'pending'}; 
         
-    fetch ('https://ancient-coast-73356.herokuapp.com/addOrder', {
+    fetch ('http://localhost:5000/addOrder', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json'},
         body: JSON.stringify(orderDetails)

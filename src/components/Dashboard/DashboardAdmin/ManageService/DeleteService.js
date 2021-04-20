@@ -8,7 +8,7 @@ const DeleteService = () => {
     const [deleteState, setDeleteState] = useState([]);
 
     useEffect(() => {
-        fetch('https://ancient-coast-73356.herokuapp.com/allServices')
+        fetch('http://localhost:5000/allServices')
             .then(res => res.json())
             .then(data => setServices(data))
     }, [deleteState])
@@ -17,7 +17,7 @@ const DeleteService = () => {
 
     const handleDelete =(id)=>{
         console.log('clientSide', id);
-        fetch(`https://ancient-coast-73356.herokuapp.com/delservice?id=${id}`, {
+        fetch(`http://localhost:5000/delservice?id=${id}`, {
             method: 'POST',
             headers:    {'Content-Type': 'application/json'},
             body:   JSON.stringify() 
@@ -34,12 +34,12 @@ const DeleteService = () => {
                 <Sidebar />
             </div>
             <div className="col-md-9 col-sm-6 col-12">
-                <h3 className='d-flex justify-content-center text-brand mt-3'>Remove Products </h3>
+                <h3 className='d-flex justify-content-center text-brand mt-3'>Remove Services </h3>
 
                 <div className="products-table">
-                    <table style={{margin: 'auto', width: '850px'}}>
+                    <table className='mb-3 table table-striped' style={{margin: 'auto', width: '850px'}}>
                         <tbody>
-                            <tr className="table-header">
+                            <tr className="table-header border border-success" >
                                 <th className="name-column">Name</th>
                                 <th className="mx-5 px-3">Description</th>
                                 <th className="mx-3" style={{width: '100px'}}>Price</th>
@@ -48,7 +48,7 @@ const DeleteService = () => {
                             {
 
                                 services && services.map(service =>
-                                    <tr key={service._id}>
+                                    <tr key={service._id} className="border border-success" >
                                         <td>{service.name}</td>
                                         <td>{service.description}</td>
                                         <td className="price-column"> <span>$</span> {service.price}</td>

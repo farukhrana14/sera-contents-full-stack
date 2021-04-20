@@ -13,12 +13,12 @@ const MakeAdmin = () => {
     const onSubmit = (data, event) => {
         
         setAdminData(data);
-        console.log(data);
+        // console.log(data);
         console.log(adminData);
 
 
         if (adminData.length !== 0) {
-            fetch('https://ancient-coast-73356.herokuapp.com/makeadmin', {
+            fetch('http://localhost:5000/makeadmin', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(adminData)
