@@ -3,6 +3,7 @@ import Sidebar from '../../Sidebar/Sidebar';
 import { UserContext } from '../../../../App';
 import { useForm } from "react-hook-form";
 import axios from 'axios';
+import { useHistory } from 'react-router-dom';
 
 
 const AddService = () => {
@@ -10,7 +11,7 @@ const AddService = () => {
     const { register, handleSubmit, errors } = useForm();
     const [imageURL, setIMageURL] = useState(null);
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
-    
+    const history = useHistory
 
     const handleImageUpload = (event) => {
         // console.log(event.target.files[0]);
@@ -44,7 +45,7 @@ const AddService = () => {
         .then(res => res.json())
         .then(res => console.log(res))
         setIMageURL(null);
-        e.target.reset();
+        history.pushState('/addservice')
     };
 
 

@@ -3,7 +3,7 @@ import React from 'react';
 const ReviewSingle = (props) => {
     const {userName, photoURL, description} = props.review;
     return (
-        <div className="card shadow-sm mb-5">
+        <div className="card col-md-4 shadow-sm mb-5">
             <div className="card-header d-flex  align-items-center">
                 <img className="mx-3" src={photoURL} alt="" width="100"/>
                 <div>

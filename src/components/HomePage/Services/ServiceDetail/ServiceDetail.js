@@ -13,6 +13,8 @@ const ServiceDetail = ({service}) => {
     }
 
     
+
+    
     return (
         <AnimationWrapper className='card col-md-4 text-center bg-light mb-5 px-3 pt-3'>
         

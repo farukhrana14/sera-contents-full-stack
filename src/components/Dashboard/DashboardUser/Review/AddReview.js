@@ -3,6 +3,7 @@ import Sidebar from '../../Sidebar/Sidebar';
 import { UserContext } from '../../../../App';
 import { useForm } from "react-hook-form";
 import axios from 'axios';
+import { useHistory } from 'react-router-dom';
 
 
 const AddReview = () => {
@@ -10,6 +11,7 @@ const AddReview = () => {
     const { register, handleSubmit, errors } = useForm();
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [imageURL, setIMageURL] = useState(null);
+    const history = useHistory();  
 
     const handleImageUpload = (event) => {
         // console.log(event.target.files[0]);
@@ -39,9 +41,9 @@ const AddReview = () => {
             body:   JSON.stringify(reviewData)
         })
         .then(res => res.json())
-        .then(res => console.log(res))
+        // .then(res => console.log(res))
         setIMageURL(null);
-        e.target.reset();
+        history.push('/addreview');
 
     }
 
@@ -63,7 +65,7 @@ const AddReview = () => {
                     </div>
 
                     <div className="form-group">
-                        <input type="text" ref={register({ required: true })} name="description" placeholder='Description of Service' className="form-control" />
+                        <input type="text" ref={register({ required: true })} name="description" placeholder='Description of Review' className="form-control" />
                         {errors.email && <span className="text-danger">Description is required</span>}
                     </div>
 

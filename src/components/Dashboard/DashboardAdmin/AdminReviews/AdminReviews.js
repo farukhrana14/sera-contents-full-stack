@@ -18,10 +18,10 @@ const AdminReviews = () => {
             .then(data => setReviews(data))
     }, [deleteState])
 
-    console.log(reviews);
+    // console.log(reviews);
 
     const handleDelete =(id)=>{
-        console.log('clientSide', id);
+        // console.log('clientSide', id);
         fetch(`http://localhost:5000/delreview?id=${id}`, {
             method: 'POST',
             headers:    {'Content-Type': 'application/json'},
@@ -45,17 +45,19 @@ const AdminReviews = () => {
                     <table className='mb-3 table table-striped' style={{margin: 'auto', maxWidth: '850px'}}>
                         <tbody>
                             <tr className="table-header" style={{border: '1px solid gray'}}>
+                                <th>Serial</th>
                                 <th style={{width: '150px'}} className="name-column">Name</th>
                                 <th className="text-center">Description</th>
                                 <th style={{width: '80px'}} className="action-column text-center">Delete</th>
                             </tr>
                             {
 
-                                reviews && reviews.map(review =>
+                                reviews && reviews.map((review, index) =>
                                     <tr key={review._id} style={{border: '1px solid gray'}}>
+                                        <td className='text-center'>{index+1}</td>
                                         <td className="px-3">{review.userName}</td>
                                         <td>{review.description}</td>
-                                        <td><FontAwesomeIcon onClick={() => handleDelete(review._id)} className="trash-svg mx-5" color="#DC143C" size='2x' icon={faTrashAlt} /> </td>
+                                        <td><FontAwesomeIcon onClick={() => handleDelete(review._id)} className="trash-icon mx-5" color="#A8A8A8" size='2x' icon={faTrashAlt} /> </td>
                                     </tr>
                                 )
 

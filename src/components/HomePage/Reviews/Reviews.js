@@ -33,32 +33,31 @@ const Reviews = () => {
 
     let [reviews, setReviews] = useState([]);
 
-    useEffect(()=>{
+    useEffect(() => {
         fetch('http://localhost:5000/allReviews')
-        .then(res=> res.json())
-        .then(data => setReviews(data))
+            .then(res => res.json())
+            .then(data => setReviews(data))
 
-    },[])
+    }, [])
     console.log(reviews);
 
-    if(reviews.length === 0){
+    if (reviews.length === 0) {
         reviews = reviewsData;
     }
 
     return (
         <section className="reviews my-5 pt-5">
-        <div className="container">
-          <div className="section-header text-center">
-            <h5 className="text-uppercase">Reviews</h5>
-            <h2 className="text-brand" >From Our Customers</h2>
-          </div>
-          <div className="card-deck mt-5">
-                    {
-                        reviews && reviews.map(review => <ReviewSingle review={review} key={review.userName}> </ReviewSingle>)
-                    }
-
-                    
-
+            <div className="container">
+                <div className="section-header text-center">
+                    <h5 className="text-uppercase">Reviews</h5>
+                    <h2 className="text-brand" >From Our Customers</h2>
+                </div>
+                <div className='d-flex justify-content-center'> 
+                    <div className="w-75 row mt-3">
+                        {
+                            reviews && reviews.map(review => <ReviewSingle review={review} key={review.userName}> </ReviewSingle>)
+                        }
+                    </div>
                 </div>
             </div>
         </section>

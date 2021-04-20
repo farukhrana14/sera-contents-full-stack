@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import './HomePageBooking.css'; 
 import PaymentProcess from '../PaymentProcess/PaymentProcess';
 import { ServiceContext } from '../../../../App';
+import { useHistory } from 'react-router-dom';
 
 
 
@@ -15,8 +16,9 @@ const HomePageBooking = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [selectedService, setSelectedService] = useContext(ServiceContext); 
     const [shippingData, setShippingData] = useState();
+    const history = useHistory();
 
-
+    console.log(selectedService);
 
     const onSubmit = data => {
         setShippingData(data);
@@ -36,7 +38,7 @@ const HomePageBooking = () => {
     .then (data => {
         if(data){
             alert('Your Order is placed successfully');
-            window.location.reload(false);
+            history.push('/')
             
         }
     })
@@ -59,17 +61,17 @@ const HomePageBooking = () => {
                 
                     <form className='p-5' onSubmit={handleSubmit(onSubmit)}>
                         <div className="form-group">
-                             <input type="text" ref={register({ required: true })} name="name" defaultValue={loggedInUser.name || ''}  className="form-control" />
+                             <input type="text" ref={register({ required: true })} name="name" defaultValue={loggedInUser.name || ''} placeholder='Your Name' className="form-control" />
                             {errors.name && <span className="text-danger">This field is required</span>}
                         </div>
 
                         <div className="form-group">
-                             <input type="text" ref={register({ required: true })} name="email" defaultValue={loggedInUser.email}  className="form-control" />
+                             <input type="text" ref={register({ required: true })} name="email" defaultValue={loggedInUser.email} placeholder='Your Email' className="form-control" />
                                 {errors.email && <span className="text-danger">This field is required</span>}
                         </div>
 
                         <div className="form-group">
-                            <input type="text" ref={register({ required: true })} name="service" defaultValue={selectedService.name} className="form-control"  />
+                            <input type="text" ref={register({ required: true })} name="service" defaultValue={selectedService.name} placeholder='Write a Service Name' className="form-control"  />
                         </div>
 
                         <div className="form-group">

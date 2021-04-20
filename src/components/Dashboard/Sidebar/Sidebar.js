@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import './Sidebar.css';
 import { Link, useHistory } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUserShield, faNewspaper, faTasks, faShoppingCart, faCog, faSignOutAlt, faHome, faGripHorizontal } from '@fortawesome/free-solid-svg-icons';
+import { faUserShield, faNewspaper, faTasks, faCartPlus, faThList, faShoppingCart, faCog, faSignOutAlt, faHome, faGripHorizontal } from '@fortawesome/free-solid-svg-icons';
 import { faFileAlt } from '@fortawesome/free-regular-svg-icons';
 import jwt_decode from "jwt-decode";
 import { UserContext } from '../../../App';
@@ -61,7 +61,7 @@ const Sidebar = () => {
                     </li>
                     <li>
                         <Link to="/dashboard" className="text-white">
-                            <FontAwesomeIcon icon={faGripHorizontal} /> <span>Dashboard</span>
+                            <FontAwesomeIcon icon={faThList} /> <span>Dashboard</span>
                         </Link>
                     </li>
 
@@ -70,6 +70,13 @@ const Sidebar = () => {
                             <FontAwesomeIcon icon={faShoppingCart} /> <span>All Bookings</span>
                         </Link>
                     </li>
+
+                    <li>
+                        <Link to="/newbooking" className="text-white">
+                            <FontAwesomeIcon icon={faCartPlus} /> <span>Add New Booking</span>
+                        </Link>
+                    </li>
+
                     <li>
                         <Link to="/addReview" className="text-white">
                             <FontAwesomeIcon icon={faFileAlt} /> <span>Add Review</span>
@@ -85,8 +92,8 @@ const Sidebar = () => {
                     <hr style={{ border: '1px solid white' }} />
 
                     <li>
-                        <Link to="/bookinglist" className="text-white" >
-                            <FontAwesomeIcon icon={faTasks} /> <span>Bookings</span>
+                        <Link to="/updateservice" className="text-white" >
+                            <FontAwesomeIcon icon={faTasks} /> <span>All Bookings/ Update</span>
                         </Link>
                     </li>
                     <li>

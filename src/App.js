@@ -17,6 +17,8 @@ import AddService from './components/Dashboard/DashboardAdmin/ManageService/AddS
 import MakeAdmin from './components/Dashboard/DashboardAdmin/MakeAdmin/MakeAdmin';
 import HomePageBooking from './components/Dashboard/DashboardUser/HomePageBooking/HomePageBooking';
 import DeleteService from './components/Dashboard/DashboardAdmin/ManageService/DeleteService';
+import NewBooking from './components/Dashboard/DashboardUser/NewBooking/NewBooking';
+import UpdateService from './components/Dashboard/DashboardAdmin/ManageService/UpdateService';
 
 export const UserContext = createContext();
 export const ServiceContext = createContext();
@@ -40,6 +42,10 @@ function App() {
             <HomePageBooking/>
           </PrivateRoute>
 
+          <PrivateRoute exact path='/newbooking'>
+            <NewBooking/>
+          </PrivateRoute>
+
           <PrivateRoute exact path='/bookinglist'>
             <BookingList/>
           </PrivateRoute>
@@ -54,6 +60,10 @@ function App() {
 
           <PrivateRoute exact path='/addservice'>
             <AddService/>
+          </PrivateRoute>
+
+          <PrivateRoute exact path='/updateservice'>
+            <UpdateService/>
           </PrivateRoute>
 
           <PrivateRoute exact path='/deleteservice'>

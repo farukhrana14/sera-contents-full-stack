@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Sidebar from '../../Sidebar/Sidebar';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faTrashAlt} from '@fortawesome/free-solid-svg-icons';
+import './DeleteService.css';
 
 const DeleteService = () => {
     const [services, setServices] = useState([]);
@@ -13,7 +14,7 @@ const DeleteService = () => {
             .then(data => setServices(data))
     }, [deleteState])
 
-    console.log(services);
+    // console.log(services);
 
     const handleDelete =(id)=>{
         console.log('clientSide', id);
@@ -40,6 +41,7 @@ const DeleteService = () => {
                     <table className='mb-3 table table-striped' style={{margin: 'auto', width: '850px'}}>
                         <tbody>
                             <tr className="table-header border border-success" >
+                                <th>Serial</th>
                                 <th className="name-column">Name</th>
                                 <th className="mx-5 px-3">Description</th>
                                 <th className="mx-3" style={{width: '100px'}}>Price</th>
@@ -47,12 +49,13 @@ const DeleteService = () => {
                             </tr>
                             {
 
-                                services && services.map(service =>
+                                services && services.map((service, index) =>
                                     <tr key={service._id} className="border border-success" >
+                                        <td>{index+1}</td>
                                         <td>{service.name}</td>
                                         <td>{service.description}</td>
                                         <td className="price-column"> <span>$</span> {service.price}</td>
-                                        <td><FontAwesomeIcon onClick={() => handleDelete(service._id)} className="trash-svg" color="#DC143C" size='2x' icon={faTrashAlt} /> </td>
+                                        <td><FontAwesomeIcon onClick={() => handleDelete(service._id)} className="trash-svg" color="#A8A8A8" size='2x' icon={faTrashAlt} /> </td>
                                     </tr>
                                 )
 
