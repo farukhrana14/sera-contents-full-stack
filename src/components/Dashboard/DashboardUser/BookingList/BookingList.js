@@ -8,9 +8,16 @@ const BookingList = () => {
     const [orders, setOrders] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/showorders')
+        fetch('http://localhost:5000/showOrdersbyEmail', {
+            method: 'POST',
+            headers:    { 'Content-Type': 'application/json' },
+            body:   JSON.stringify({email: loggedInUser.email})
+        })
             .then(res => res.json())
-            .then(data => setOrders(data))
+            .then(data => {
+                // console.log(data);
+                setOrders(data);
+            })
     }, [])
 
     const formatDate = (string) => {
