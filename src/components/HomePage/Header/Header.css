@@ -1,3 +1,5 @@
+
+
 .btn-green, .cover a.btn.btn-green, .cover .jumb a.btn.btn-green {
     color: #fff;
     background-color: #46b04a;
@@ -25,3 +27,9 @@
     font-size: xx-large;
     
 }
+
+@media screen and (max-width: 600px) {
+    .header-img img {
+      width: 200px;
+    }
+  }
