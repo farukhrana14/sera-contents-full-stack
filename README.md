@@ -5,7 +5,7 @@ This assignment is submitted as a par of Complete Web Development Course by [Pro
 ## Site and code links
 
 Live site hosted at [Firebase](https://time-machine-7b98e.web.app/admin/addProducts) 
-& Code repository is at [Client-side](https://github.com/farukhrana14/sera-contents-full-stack) and [Server-side](https://github.com/Porgramming-Hero-web-course/complete-website-server-farukhrana14)
+& Code repository is at [Client-side](https://github.com/farukhrana14/sera-contents-full-stack) and [Server-side](https://github.com/farukhrana14/-sera-contents-express-server)
 
 
 ## Tasks in the assignment
