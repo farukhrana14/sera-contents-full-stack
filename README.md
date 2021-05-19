@@ -4,9 +4,10 @@ This assignment is submitted as a par of Complete Web Development Course by [Pro
 
 ## Site and code links
 
-Live site hosted at [Firebase](https://sera-contents.web.app/) 
-& Code repository is at [Client-side](https://github.com/farukhrana14/sera-contents-full-stack) and [Server-side](https://github.com/farukhrana14/-sera-contents-express-server)
-
+* Live site hosted at [Firebase](https://sera-contents.web.app/) 
+* Git-Client [Client-side](https://github.com/farukhrana14/sera-contents-full-stack) and
+* Git-Server [Server-side](https://github.com/farukhrana14/-sera-contents-express-server)
+* Deployed on [Heroku](https://fathomless-river-81170.herokuapp.com)
 
 ## Tasks in the assignment
 
